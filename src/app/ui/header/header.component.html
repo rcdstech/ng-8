@@ -1,0 +1,39 @@
+<header class="header_area">
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+
+        <a class="navbar-brand logo_h" routerLink=""><img src="../assets/img/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" (click)="showMenu = !showMenu" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse offset" [ngClass]="{'show': showMenu}" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav justify-content-end">
+            <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="">Home</a></li>
+            <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="about">About</a></li>
+            <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="services">Services</a></li>
+            <li class="nav-item"><a class="nav-link"   routerLinkActive="active" routerLink="portfolio">Portfolio</a></li>
+            <li class="nav-item submenu dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="elements">Elements</a></li>
+                <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="portfolioDetails">Portfolio Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item submenu dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="singleBlog">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
