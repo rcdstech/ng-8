@@ -19,5 +19,7 @@ jobs:
       run: npm install -g @angular/cli
     - name: Install Dependencies
       run: npm install
+    - name: list dir
+      run: ls -l
     - name: Build
       run: ng build
