@@ -20,7 +20,7 @@ jobs:
     - name: Install Dependencies
       run: npm install
     - name: list dir
-      run: tree
+      run: ls
     - name: Build
       run: cd ..
     - name: Angular Github Actions
