@@ -7,23 +7,20 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
 
     steps:
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - name: Install NG
-      run: npm install -g @angular/cli
-    - name: Install Dependencies
-      run: npm install
-    - name: list dir
-      run: ls
-    - name: Build
-      run: cd ..
-    - name: Angular Github Actions
-      uses: mayur-rawte/github-angular-actions@latest
-    - name: Build
-      run: npm run build
+      - uses: actions/checkout@v1
+
+      - name: Node $
+        uses: actions/setup-node@v1
+        with:
+          node-version: $
+
+      - name: npm install and npm run build
+        run: |
+          npm ci
+          npm run build:ci 
