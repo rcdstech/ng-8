@@ -22,4 +22,6 @@ jobs:
     - name: list dir
       run: tree
     - name: Build
+      run: cd ..
+    - name: Build
       run: npm run build
