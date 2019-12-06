@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Setup Node
@@ -20,6 +20,6 @@ jobs:
     - name: Install Dependencies
       run: npm install
     - name: list dir
-      run: ls -l
+      run: tree
     - name: Build
-      run: ng build
+      run: npm run build
