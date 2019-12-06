@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: Install Dependencies
+      run: npm install
+    - name: Install NG
+      run: npm install -g @angular/cli
+    - name: Install NG
+      run: ng build
