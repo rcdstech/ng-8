@@ -23,5 +23,7 @@ jobs:
       run: tree
     - name: Build
       run: cd ..
+    - name: Angular Github Actions
+      uses: mayur-rawte/github-angular-actions@latest
     - name: Build
       run: npm run build
